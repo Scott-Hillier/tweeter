@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 100%;
+  padding: 1.5em;
+  align-items: center;
+  font-family: "Bungee", cursive, sans-serif;
+  height: 120px;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+.new {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5em;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 120px;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+.down-arrows {
+  display: flex;
+  color: red;
+}
