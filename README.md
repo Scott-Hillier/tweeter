@@ -16,9 +16,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Timeago 4.0.2
 
 ## Screenshots
 
-![Screen Shot 2021-11-18 at 6 32 49 PM](https://user-images.githubusercontent.com/91638976/142556092-4e9bf664-bda2-466b-b294-e8b7050edd7e.png)
+![Screen Shot of Small Page](https://user-images.githubusercontent.com/91638976/142556092-4e9bf664-bda2-466b-b294-e8b7050edd7e.png)
 
-![Screen Shot 2021-11-18 at 6 31 59 PM](https://user-images.githubusercontent.com/91638976/142556174-51d9b703-be77-44c9-8601-0d999a48b3d9.png)
+![Screen Shot of Large Page](https://user-images.githubusercontent.com/91638976/142556174-51d9b703-be77-44c9-8601-0d999a48b3d9.png)
