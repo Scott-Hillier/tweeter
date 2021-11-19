@@ -1,30 +1,53 @@
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: flex-start;
-  width: 100%;
-  padding: 1.5em;
-  align-items: center;
-  font-family: "Bungee", cursive, sans-serif;
-  height: 120px;
-  background-color: #4056a1;
-  color: #ffffff;
+@media only screen and (max-width: 1000px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
+    padding: 1.5em;
+    font-family: "Bungee", cursive, sans-serif;
+    color: #ffffff;
+    background-color: #93ca3a;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+    height: 120px;
+  }
+  .new {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #ffffff;
+  }
+  .down-arrows {
+    color: red;
+  }
 }
 
-.new {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5em;
-  align-items: center;
-  font-family: "Source Sans Pro", sans-serif;
-  height: 120px;
-  background-color: #4056a1;
-  color: #ffffff;
-}
-
-.down-arrows {
-  display: flex;
-  color: red;
+@media only screen and (min-width: 1000px) {
+  .nav {
+    z-index: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #4056a1;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+    font-family: "Bungee", cursive, sans-serif;
+  }
+  .new {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #ffffff;
+  }
+  .down-arrows {
+    color: red;
+  }
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -31,49 +32,56 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/old-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-
-    <header>
-      <nav>
-        <span>TWEETER</span>
+    <nav class="nav">
+      <span>TWEETER</span>
+      <button class="button">
         <span class="new">
-          Write a new tweet
-          <div><i class="fas fa-angle-double-down down-arrows"></i></div>
+        Write a new tweet
+        <i class="fas fa-angle-double-down down-arrows"></i>
         </span>
-      </nav>
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div>
-        <h2>Your Name</h2>
-      </div>
-    </header>
+      </button>
+    </nav>
 
+    
     <!-- Page-specific (main) content here -->
     <main>
+      <header class="header">
+          <img src="/images/profile-hex.png" />
+          <h2>Scott Hillier</h2>
+      </header>
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
-          <textarea
-            class="text"
-            placeholder="What are you humming about?"
-            name="text"
-            id="tweet-text"
-          ></textarea>
+        <!-- <h3>Compose Tweet</h3> -->
+        <h4 class="error"></h4>
+        <form class="text" action="/tweets" method="POST" id="create">
+          <input
+          placeholder="What are you humming about?"
+          name="text"
+          id="tweet-text"
+          type="text"
+          ></input>
           <div class="compose">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <button type="submit" id="btn">Tweet</button>
+            <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <article class="tweet-container">
+        </article>
       </section>
     </main>
   </body>

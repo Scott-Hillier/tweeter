@@ -1,36 +1,129 @@
-.new-tweet {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-family: sans-serif;
-  background-color: #f4f1ec;
-  color: black;
-  width: 100%;
+@media only screen and (max-width: 1000px) {
+  .new-tweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #f4f1ec;
+    color: black;
+    width: 100%;
+  }
+
+  .error {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #f4f1ec;
+  }
+
+  .text {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 10%;
+  }
+
+  #tweet-text {
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: #f4f1ec;
+    width: 100%;
+  }
+
+  .compose {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Bungee", sans-serif;
+    color: black;
+    padding: 2px;
+    width: 100%;
+  }
+
+  #btn {
+    background-color: #4056a1;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .negative {
+    color: red;
+  }
+
+  .hidden {
+    visibility: visible;
+  }
+
+  .button {
+    background-color: #93ca3a;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+    border: none;
+  }
 }
 
-.text {
-  display: flex;
-  flex-direction: row;
-  width: 30em;
-  height: 40%;
-  border: none;
-  border-bottom: 3px solid black;
-  background-color: #f4f1ec;
-}
+@media only screen and (min-width: 1000px) {
+  .new-tweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #f4f1ec;
+    color: black;
+    width: 90%;
+    flex-basis: 75%;
+    align-items: center;
+  }
 
-.compose {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: "Bungee", cursive, sans-serif;
-  color: black;
-  padding: 2px;
-}
+  .error {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #f4f1ec;
+  }
 
-.tweet-button {
-  background-color: #4056a1;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
+  .text {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  #tweet-text {
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: #f4f1ec;
+    width: 100%;
+  }
+
+  .compose {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Bungee", sans-serif;
+    color: black;
+    padding: 2px;
+    width: 100%;
+  }
+
+  #btn {
+    background-color: #4056a1;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .negative {
+    color: red;
+  }
+
+  .hidden {
+    visibility: visible;
+  }
+
+  .button {
+    background-color: #4056a1;
+    border: none;
+  }
 }
