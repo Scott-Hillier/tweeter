@@ -1,3 +1,5 @@
+/* CSS styling for the create new tweet field and error message
+ for different screen sizes */
 @media only screen and (max-width: 1000px) {
   .new-tweet {
     display: flex;

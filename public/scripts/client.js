@@ -13,7 +13,9 @@ $(document).ready(function () {
   const error = $(".error");
 
   $("#create").submit(function (event) {
+    // Prevents the normal actions from taking place
     event.preventDefault();
+    // Posts an error message if the tweet is too long or if there is no text
     if ($("#tweet-text").val().length > 140) {
       error.text("🚨That's too long!🚨");
       return;
@@ -21,8 +23,10 @@ $(document).ready(function () {
       error.text(`🚨You need to write something!🚨`);
       return;
     } else {
+      // Clears the error if the tweet was successfully posted
       error.text("");
     }
+    // Makes a POST request to /tweets and if it is successful it will load all the tweets
     $.ajax({
       url: "/tweets",
       method: "POST",
@@ -34,11 +38,14 @@ $(document).ready(function () {
     });
   });
 
+  // Buttom reveals the form to make a new tweet
   $(".button").on("click", function () {
     document.getElementById("create").classList.add("hidden");
   });
 });
 
+// Makes a GET request for the tweet template
+// If successful it will create the tweet in the database
 const loadTweets = function () {
   $.ajax({
     url: "/tweets",
@@ -49,6 +56,9 @@ const loadTweets = function () {
   });
 };
 
+// Clears the HTML element so tweets aren't rendered multiple times
+// Loops through the array of objects containing information for each tweet
+// Fills the HTML element again with tweets to post
 const renderTweets = function (tweets) {
   const container = $(".tweet-container").empty();
   for (const tweet of tweets) {
@@ -57,6 +67,7 @@ const renderTweets = function (tweets) {
   }
 };
 
+//Attaches the tweet information to the HTML tag and returns the completed HTML
 const createTweetElement = function (tweetData) {
   let $tweet = $(`
   <container class = "tweet-box">
@@ -86,6 +97,7 @@ const createTweetElement = function (tweetData) {
   return $tweet;
 };
 
+// Protects the site from hackers
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));

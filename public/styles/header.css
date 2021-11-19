@@ -1,3 +1,4 @@
+/* CSS styling for the header for different screen sizes */
 @media only screen and (max-width: 1000px) {
   .header {
     display: flex;
